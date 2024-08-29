@@ -12,6 +12,7 @@
 #include "layers.h"
 #include "flappie_stdlib.h"
 #include "util.h"
+#include "util.h"
 
 
 float argmax_decoder(const_flappie_matrix logpost, int *seq) {
@@ -51,6 +52,7 @@ char * collapse_repeats(int const * path, size_t npos, int modbase){
     RETURN_NULL_IF(NULL == basecall, NULL);
 
     basecall[0] = base_lookup[path[0] % modbase];
+	
     for(size_t pos=1, bpos=1 ; pos < npos ; pos++){
         if(path[pos] != path[pos - 1]){
             assert(bpos < nbase);
