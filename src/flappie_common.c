@@ -9,6 +9,7 @@
 #include "flappie_common.h"
 #include "flappie_stdlib.h"
 #include "util.h"
+#include "licence.h"
 
 raw_table trim_and_segment_raw(raw_table rt, size_t trim_start, size_t trim_end, size_t varseg_chunk, float varseg_thresh) {
     RETURN_NULL_IF(NULL == rt.raw, (raw_table){0});
